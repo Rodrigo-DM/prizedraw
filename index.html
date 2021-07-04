@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="shortcut icon" href="./assets/images/icone.jpg">
+
+    <title>Sorteio</title>
+</head>
+
+<body>
+    <header class="page__top">
+        <figure class="page__topLogo">
+            <img src="./assets/images/logo.png" alt="">
+        </figure>
+        <h1 class="page__topTitle">Hora do Sorteio</h1>
+    </header>
+    <main class="page__main">
+        <section class="toAdd">
+            <header class="toAdd__top">
+                <h3 class="toAdd__title">Adicionar Participante</h3>
+            </header>
+            <div class="toAdd__inputBox">
+                <form action="">
+                    <input type="text" placeholder="Nome" id="input-add" name="input-add">
+                    <button class="btn" id="btn-add">Adicionar</button>
+                </form>
+            </div>
+        </section>
+        <section class="container__display">
+            <div class="display">
+                <span class="display__text"></span>
+            </div>
+        </section>
+        <Section class="section__list hidden">
+            <div class="names__list">
+                <h3 class="list__title">Participantes:</h3>
+                <ul class="list"></ul>
+            </div>
+            <div class="luck__list">
+                <h3 class="list__title">Sorteados:</h3>
+                <ul class="list"></ul>
+            </div>
+        </Section>
+        <section class="buttons">
+            <button class="btn" id="btn-showList">Mostrar listas</button>
+            <button class="btn hidden" id="btn-hiddenList">Ocultar listas</button>
+
+            <button class="btn" id="btn-luck">Sortear</button>
+        </section>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>

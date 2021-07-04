@@ -1,0 +1,185 @@
+html,
+body,
+header,
+figure,
+main,
+section,
+h1,
+h2,
+h3,
+div,
+input,
+button,
+ul,
+li {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #edebec;
+}
+
+.page__top {
+  height: 60px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9d9799;
+}
+
+.page__topTitle {
+  color: #fff;
+  font-size: calc(1rem + 2vw);
+}
+
+.page__topLogo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.page__topLogo img {
+  height: 100%;
+}
+
+.page__main {
+  width: 100%;
+  height: calc(100vh - 70px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.toAdd__inputBox {
+  height: 70px;
+  width: 100%;
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-size: 1rem;
+}
+
+#input-add {
+  padding: 5px;
+  width: calc(100vw - 125px);
+  max-width: 350px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.btn {
+  height: 25px;
+  width: 110px;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #fff;
+  background-color: #26676f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #26666fd0;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  background-color: #f9fdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  height: calc(40px + 5vw);
+  border: 1vw inset #26676f;
+}
+
+.display__text {
+  font-weight: 600;
+  color: #26676f;
+  font-size: calc(1.8rem + 2vw);
+}
+
+.toAdd__title,
+.list__title {
+  font-size: 1.2rem;
+}
+
+.toAdd {
+  text-align: center;
+}
+
+.section__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.names__list,
+.luck__list {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .page__top {
+    height: 80px;
+  }
+  .section__list {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .alert {
+    font-size: 1.5rem;
+  }
+  .toAdd__title,
+  .list__title {
+    font-size: 2rem;
+  }
+
+  li {
+    font-size: 1.5rem;
+  }
+
+  #input-add {
+    font-size: 1.5rem;
+    height: 40px;
+    max-width: 500px;
+  }
+
+  .btn {
+    height: 40px;
+    width: 200px;
+    font-size: 1.5rem;
+  }
+}
