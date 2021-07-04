@@ -62,6 +62,7 @@ const getLuck = () => {
 }
 
 const animationDisplay = () => {
+    btn[3].disabled = true;
     const display = document.querySelector('.display__text');
     let count = 0;
     const repeat = setInterval(() => {
@@ -76,6 +77,7 @@ const animationDisplay = () => {
     setTimeout(() => {
         clearInterval(repeat);
         display.innerText = luck;
+        btn[3].disabled = false
     }, 2000)
 }
 
@@ -90,9 +92,20 @@ btn[1].addEventListener('click', () => effectList(btn[1], btn[2], 2))// btn[1];
 btn[2].addEventListener('click', () => effectList(btn[2], btn[1], 1)); //hidden
 
 btn[3].addEventListener('click', () => {
-    getLuck();
-    setTimeout(() => {
-        makerList(lucks, lists[1]);
-    }, 2000)
-    animationDisplay();
+    if (names.length > 0) {
+        getLuck();
+        setTimeout(() => {
+            makerList(lucks, lists[1]);
+        }, 2000)
+        animationDisplay();
+    } else {
+        mgsAlert('Sem participantes');
+    }
+});
+
+btn[4].addEventListener('click', () => {
+    const display = document.querySelector('.display__text');
+    lucks = [];
+    display.innerHTML = '';
+    makerList(lucks, lists[1]);
 });
